@@ -1,0 +1,183 @@
+  /*navigation menu*/
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+.menu-container {
+    color: #fff;
+    background-color: #7bb5f7;  /* Blue */
+    padding: 20px 0;
+
+    }
+
+.menu {
+    border: 1px solid #fff;  /* For debugging */
+    width: 900px;
+    }
+ .menu-container {
+     /* ... */ 
+    display: flex;
+    }
+ menu-container {
+/* ... */
+    display: flex-end;
+    justify-content: center;    
+    
+    }
+ 
+ .menu {
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+   margin-left: 350px;
+    }
+ 
+ .container{
+ clear:both;
+ overflow:auto;
+}
+
+
+
+img{
+ float:left;
+   width: 60px;
+   height: 100%;
+  
+   
+ }
+
+* {
+  box-sizing: border-box; 
+ }
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   margin: 0;
+ }
+ #main {
+   display: flex;
+   min-height: calc(100vh - 40vh);
+ }
+ #main > article {
+   flex: 1;
+ }
+ #main > nav, 
+ 
+ #main > aside {
+   flex: 0 0 20vw;
+   background: #7bb5f7;
+ }
+ #main > nav {
+   order: -1;
+ }
+ header, footer, article, nav, aside {
+   padding: 1em;
+ }
+
+ /*This is the code for height size of the header and footer*/
+ header, footer {
+  color: white;
+   background: rgb(50, 117, 205);
+   height: 7vh;
+ }
+ nav {
+   background: rgb#7bb5f7;
+   height: 25vh;
+ }
+
+
+ /*This is the code for media objects*/
+ .media {
+   display: flex;
+   align-items: flex-start;
+   background: #F6F3EB;
+   padding: 1em;
+   border-radius: 3px;
+   max-width: 1000em;
+ }
+ .media-object {
+   margin-right: 1em;
+ }
+ .media-body {
+   flex: 1;
+ }
+ .media-heading {
+   margin: 0 0 .5em;
+ }
+
+img{
+ float:left;
+   width: 60px;
+   height: 100%;
+  
+   
+ }
+
+    /*This is the code for the slide show*/
+     .cards {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+ .cards img {
+   margin: 10px;
+   border: 3px solid #000;
+   box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+    width: 18%;
+ }
+
+    /*This is the code for the content design*/
+   
+   .media {
+   display: flex;
+   align-items: flex-start;
+   background: #F6F3EB;
+   padding: 1em;
+   border-radius: 3px;
+   width: 100%;
+ }
+ .media-object {
+   margin-right: 1em;
+ }
+ .media-body {
+   flex: 1;
+ }
+ .media-heading {
+   margin: 0 0 .5em;
+ }  
+   
+   /*This is the code for the footer*/
+   
+   .fa {
+ padding: 5px;
+ font-size: 13px;
+ width: 50px;
+ text-align: center;
+ text-decoration: none;
+ margin: 5px 2px;
+}
+
+.fa:hover {
+   opacity: 0.7;
+}
+
+.fa-facebook {
+ background: #3B5998;
+ color: white;
+}
+
+.fa-twitter {
+ background: #55ACEE;
+ color: white;
+}
+
+.fa-google {
+ background: #dd4b39;
+ color: white;
+}
