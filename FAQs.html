@@ -10,6 +10,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+    li:hover {
+  background-color:rgba(224, 193, 12, 0.74);
+}
+a.active {
+  background-color: rgb(28, 221, 102);
+}
+
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
@@ -165,6 +172,65 @@ h2 {
   border-bottom: 1px solid grey;
   height: 50px;
 }
+
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        /* Style inputs */
+        input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        /* margin-top: 6px; */
+        margin-bottom: 16px;
+        resize: vertical;
+        }
+
+                    input[type=submit] {
+                    background-color: blue;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    cursor: pointer;
+                    }
+
+                    input[type=submit]:hover {
+                    background-color: gold;
+                    }
+
+                    /* Style the container/contact section */
+                    .container1 {
+                    border-radius: 5px;
+                    background-color: #ccc; 
+                    padding: 10px;
+                    }
+
+                    /* Create two columns that float next to eachother */
+                    .column {
+                    float: under;
+                    width: 50%;
+                    margin-top: 6px;
+                    padding: 20px;
+                    }
+
+                    /* Clear floats after the columns */
+                    .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                    }
+
+            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+            
+            .column, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
   </style>
 </head>
 <body>
@@ -178,7 +244,7 @@ h2 {
         <span class="icon-bar"></span>                        
       </button>
       
-      <a class="navbar-brand"  href="Landing.html"><img src="./Pictures/logo-removebg-preview.png" style="width:75%;"></a>
+      <a class="navbar-brand"  href="Index.html"><img src="Pictures/logo-removebg-preview.png" style="width:75%;"></a>
     </div>
     </div>
   <div class="container-fluid">
@@ -189,22 +255,16 @@ h2 {
     <div class="collapse navbar-collapse" id="myNavbar">
       <br>
       <ul class="nav navbar-nav" style="margin-left:50%;">
-        <li ><a href="index.html">Home</a></li>
+        <li ><a href="Home.html">Home</a></li>
         <li ><a href="About.html">About</a></li>
         <li ><a href="Events.html">Events</a></li>
         <li ><a href="Contact.html">Contact</a></li>
-        <li class="active"><a href="FAQs.html">FAQs</a></li>
+        <li><a href="Games.html">Games</a></li>
+        <li ><a href="FAQs.html" id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">FAQs</a></li>
       </ul>
-       <form class="navbar-form navbar-left" action="/action_page.php">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+      <input type="text" placeholder="Search.." id="searchInput" style="margin:right;max-width:100px;background: grey;">
+      <button type="submit" id="searchBtn" onclick="search();" style="background: rgb(190, 163, 9);"><i class="fa fa-search" style="margin:right;"></i></button>
+
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
@@ -232,6 +292,7 @@ h2 {
     </div>
     </form>
   </div>
+
   <br>
 <h2 class="w3-center">Frequently Asked Questions</h2>
 <br>
@@ -282,7 +343,7 @@ h2 {
       <p>•	All Teaching Assistants are first aid trained and can offer reassurance and first aid to pupils who are injured.<br> 
         •	If injury is significant, we would inform parents and appropriate first aid would be given and of course any serious injuries occurrence would resort to immediate medical service involvement. </p>
     </div>
-   
+    <button onclick="myFunction()">Try it</button>
 </div>
 <br>
 <footer class="container-fluid text-center">
@@ -319,6 +380,29 @@ for (i = 0; i < acc.length; i++) {
       document.getElementById("myForm").style.display = "none";
     }
     </script>
+<script>
 
+  document.getElementById("why").style.backgroundColor = "lightblue";
+
+</script>
+<script>
+  function mouseOver() {
+    document.getElementById("demo").style.color = "red";
+  }
+  
+  function mouseOut() {
+    document.getElementById("demo").style.color = "green";
+  }
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.createElement("IMG");
+      x.setAttribute("src", "./Pictures/NewGen2.jpg");
+      x.setAttribute("width", "304");
+      x.setAttribute("height", "228");
+      x.setAttribute("alt", "The Pulpit Rock");
+      document.body.appendChild(x);
+    }
+    </script>
 </body>
 </html>
